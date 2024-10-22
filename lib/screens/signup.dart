@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:uchef/main.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -6,19 +7,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHome(),
+      home: SignUP(),
     );
   }
 }
 
-class MyHome extends StatefulWidget {
-  const MyHome({super.key});
+class SignUP extends StatefulWidget {
+  const SignUP({super.key});
 
   @override
-  State<MyHome> createState() => _MyHomeState();
+  State<SignUP> createState() => _SignUPState();
 }
 
-class _MyHomeState extends State<MyHome> {
+class _SignUPState extends State<SignUP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,19 +40,50 @@ class _MyHomeState extends State<MyHome> {
                       //   child: Text('Sign UP'),
                       // ),
                       Positioned(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: Colors.white.withOpacity(0.50)
-                            ),
-                            child: TextFormField(
-                              clipBehavior: Clip.none,
-                              decoration: InputDecoration(
-                                  hintText: 'Enter Your Mail',
-                                  labelText: 'Username'
+                          child: Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(25),
+                                    color: Colors.white.withOpacity(0.50)
+                                ),
+                                child: TextFormField(
+                                  clipBehavior: Clip.none,
+                                  decoration: InputDecoration(
+                                      hintText: 'Enter Your Mail',
+                                      labelText: 'Username'
+                                  ),
+                                ),
                               ),
-                            ),
-                          ))
+                              SizedBox(height: 10,),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(25),
+                                    color: Colors.white.withOpacity(0.50)
+                                ),
+                                child: TextFormField(
+                                  clipBehavior: Clip.none,
+                                  decoration: InputDecoration(
+                                      hintText: 'Enter Your Password',
+                                      labelText: 'Password'
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 10,
+                              child: Text('Or'),),
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  color: Colors.white.withOpacity(0.5)
+                                ),
+                                child: TextButton(
+                                    onPressed: (){},
+                                    child: Text('Login with Gmail'),
+                                ),
+                              )
+                            ],
+                          )
+                      ),
                     ],
                   )
               ),
