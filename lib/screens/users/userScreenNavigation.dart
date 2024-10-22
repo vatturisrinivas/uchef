@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:uchef/screens/users/userHomeScreen.dart';
 
 class usernavigationscreen extends StatefulWidget {
   const usernavigationscreen({super.key});
@@ -9,30 +10,50 @@ class usernavigationscreen extends StatefulWidget {
 }
 
 class _usernavigationscreenState extends State<usernavigationscreen> {
-  var _currentIndex = 0;
+  var _currentIndex = 1;
+
+  List<Widget> _widgetOptions = <Widget>[
+
+    Text('Items'),
+    userhomescreen(),
+    Text('Profile Screen'),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Center(
+        child: _widgetOptions.elementAt(_currentIndex),
+      ),
       bottomNavigationBar: SalomonBottomBar(
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.green.shade900,
         currentIndex: _currentIndex,
         onTap: (i)=>setState(() => _currentIndex = i),
         items: [
           SalomonBottomBarItem(
             icon: Icon(Icons.shopping_cart),
             title: Text("Items"),
-            selectedColor: Colors.orange,
+            //selectedColor: Colors.orange,
           ),
 
           SalomonBottomBarItem(
             icon: Icon(Icons.home),
             title: Text("Home"),
-            selectedColor: Colors.purple,
+            //selectedColor: Colors.purple,
           ),
 
           SalomonBottomBarItem(
             icon: Icon(Icons.person),
             title: Text("Person"),
-            selectedColor: Colors.teal,
+            //selectedColor: Colors.teal,
           ),
         ],
       ),
