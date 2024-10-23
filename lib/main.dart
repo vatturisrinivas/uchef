@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uchef/screens/signup.dart';
+import 'package:uchef/screens/login.dart';
 
 void main(){
   runApp(const MyApp());
@@ -26,7 +27,8 @@ class MyHome extends StatefulWidget {
 class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
-    return SignUP();
+    // return SignUP();
+    return Login();
   }
 }
 
