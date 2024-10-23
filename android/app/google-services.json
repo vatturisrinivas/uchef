@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "554642395466",
+    "project_id": "uchef-83951",
+    "storage_bucket": "uchef-83951.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554642395466:android:a0a3d37ad81c70065c31b3",
+        "android_client_info": {
+          "package_name": "com.example.uchef"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3HcLSdERqXkssMWCeYZ84gsqJUGgiOO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
