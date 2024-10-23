@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uchef/screens/signup.dart';
-import 'package:uchef/screens/login.dart';
+import 'package:uchef/screens/users/userScreenNavigation.dart';
 
-void main(){
-  runApp(const MyApp());
-}
+void main()=>runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,24 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHome(),
+      debugShowCheckedModeBanner: false,
+      home: usernavigationscreen()
     );
   }
 }
-
-class MyHome extends StatefulWidget {
-  const MyHome({super.key});
-
-  @override
-  State<MyHome> createState() => _MyHomeState();
-}
-
-class _MyHomeState extends State<MyHome> {
-  @override
-  Widget build(BuildContext context) {
-    // return SignUP();
-    return Login();
-  }
-}
-
-
