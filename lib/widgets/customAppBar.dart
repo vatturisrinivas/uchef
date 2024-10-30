@@ -5,23 +5,32 @@ class MenuCardAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 400,
-      title: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Align text to the bottom
+      title: Stack(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Container(
+            height: 150,
+            width: MediaQuery.of(context).size.width*0.5,
+            color: Colors.redAccent,
+          ),
+          Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Align text to the bottom
             children: [
-              IconButton(
-                icon: Icon(Icons.arrow_back), // Back button icon
-                onPressed: () {
-                  Navigator.of(context).pop(); // Go back to the previous screen
-                },
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.arrow_back), // Back button icon
+                    onPressed: () {
+                      Navigator.of(context).pop(); // Go back to the previous screen
+                    },
+                  ),
+                  SizedBox(width: 300), // Empty space to align title to the bottom
+                ],
               ),
-              SizedBox(width: 48), // Empty space to align title to the bottom
+              SizedBox(height: 10,),
+              Text('Menu Card',style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold),),
             ],
           ),
-          SizedBox(height: 10,),
-          Text('Menu Card',style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold),),
         ],
       ),
 
