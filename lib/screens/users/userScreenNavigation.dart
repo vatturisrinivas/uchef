@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:uchef/screens/users/userHomeScreen.dart';
+import 'package:uchef/screens/users/userHomeScreens/userHomeScreen.dart';
+import 'package:uchef/screens/users/userOrdersScreen.dart';
 
 class usernavigationscreen extends StatefulWidget {
   const usernavigationscreen({super.key});
@@ -14,7 +15,7 @@ class _usernavigationscreenState extends State<usernavigationscreen> {
 
   List<Widget> _widgetOptions = <Widget>[
 
-    Text('Items'),
+    itemsscreen(),
     userhomescreen(),
     Text('Profile Screen'),
   ];

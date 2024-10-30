@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-class itemsscreen extends StatelessWidget {
-  const itemsscreen({super.key});
+class recipe extends StatelessWidget {
+  const recipe({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
+          child: Column(
 
-          ],
-        ),
+          )
       ),
     );
   }
